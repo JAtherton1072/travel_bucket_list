@@ -139,8 +139,8 @@
   all_sights = Sight.all
 
    all_sights.each do |sight|
-        p sight.city
-        p sight.city.country
+        # p sight.city
+        p sight.continent
       # p sight.city.country.continent
 
     end
