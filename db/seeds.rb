@@ -132,18 +132,20 @@
 
 
 
+  # city1.name = "Sydney NSW"
+  # city1.update
 
 
 
-
-  all_sights = Sight.all
-
-   all_sights.each do |sight|
-        # p sight.city
-        p sight.continent
-      # p sight.city.country.continent
-
-    end
+  # all_sights = Sight.all
+  #
+  #  all_sights.each do |sight|
+  #       # p sight.city
+  #       # p sight.country
+  #       # p sight.continent
+  #       #
+  #
+  #   end
     # binding.pry
 
 
