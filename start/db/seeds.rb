@@ -52,7 +52,7 @@
 
 
 
-#
+
   city1 = City.new({'name' => 'Sydney', 'country_id' => country1.id})
   city1.save()
   city2 = City.new({'name' => 'Auckland', 'country_id' => country9.id})
@@ -76,7 +76,7 @@
 
 
 
-#
+
   sight1 = Sight.new({'name' => 'Opera House', 'city_id' => city1.id})
   sight1.save()
   sight2 = Sight.new({'name' => 'Sky Tower', 'city_id' => city2.id})
@@ -101,13 +101,6 @@
 
 
 
-
-
-
-
-
-
-#
   bucket_list1 = BucketList.new({'sight_id' => sight1.id, 'visited' => 1})
   bucket_list1.save()
   bucket_list2 = BucketList.new({'sight_id' => sight2.id, 'visited' => 1})
@@ -132,29 +125,26 @@
 
 
 
-  # city1.name = "Sydney NSW"
-  # city1.update
+# city1.name = "Sydney NSW"
+# city1.update
 
 
 
-  # all_sights = Sight.all
-  #
-  #  all_sights.each do |sight|
-  #       # p sight.city
-  #       # p sight.country
-  #       # p sight.continent
-  #       #
-  #
-  #   end
-    # binding.pry
+# all_sights = Sight.all
+
+# all_sights.each do |sight|
+# p sight.city
+# p sight.country
+# p sight.continent
 
 
-
-
-    # puts sight.city.country
-    # puts sight.city.country.continent
+# end
+# binding.pry
 
 
 
 
-nil
+
+
+
+# nil

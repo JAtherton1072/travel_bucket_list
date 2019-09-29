@@ -1,0 +1,17 @@
+  <ul>
+
+    <% @sights.each do |sight| %>
+
+    <li>
+        <a href="/sights/<%= sight.id %>">
+          <%= sight.name   %>
+          <% city = sight.city %> <%= city["name"]%>
+          <% country = sight.country %> <%= country["name"]%>
+          <% continent = sight.continent %> <%= continent["name"]%>
+
+        </a>
+      </li>
+
+      <% end %>
+
+    </ul>
