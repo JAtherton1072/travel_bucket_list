@@ -7,5 +7,5 @@
  # index
  get '/sights' do
    @sights = Sight.all
-   erb( :index )
+   erb( :"sights/index" )
  end
