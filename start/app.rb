@@ -4,5 +4,5 @@
   require_relative('./controllers/sights_controller')
 
   get '/' do
-    erb( :index )
+    erb( :home )
   end

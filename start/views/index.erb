@@ -1,7 +1,7 @@
   <ul>
 
     <% @sights.each do |sight| %>
-
+      <% sight.on_bucket_list? %>
     <li>
         <a href="/sights/<%= sight.id %>">
           <%= sight.name   %>

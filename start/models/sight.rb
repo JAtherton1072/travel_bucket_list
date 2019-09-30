@@ -80,10 +80,16 @@
 
     #Helper methods for mapping
     def self.map_items(sight_data)
-    result = sight_data.map { |sight| Sight.new( sight ) }
-    return result
+      result = sight_data.map { |sight| Sight.new( sight ) }
+      return result
     end
 
+    def on_bucket_list?
+      # sql query to get number of rows in bucket_lists
+      # where sight_id = @id
+      # if there are none return false
+      # else return true
+    end
 
 
 
