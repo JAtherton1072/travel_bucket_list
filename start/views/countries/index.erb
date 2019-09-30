@@ -1,11 +1,11 @@
   <ul>
 
-  <% @sights.each do |sight| %>
-    <% sight.on_bucket_list? %>
+  <% @countries.each do |country| %>
+
 
   <li>
-      <a href="/sights/<%= sight.id %>">
-        <%= sight.name   %>
+      <a href="/countries/<%= country.id %>">
+        <%= country.name   %>
 
       </a>
     </li>

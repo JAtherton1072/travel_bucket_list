@@ -33,5 +33,20 @@
 
 
 
+    def self.all()
+      sql = "SELECT * FROM continents"
+      continent_data = SqlRunner.run(sql)
+      return Continent.map_items(continent_data)
+    end
+
+
+    def self.map_items(data)
+      result = data.map{|continent| Continent.new(continent)}
+      return result
+    end
+
+
+
+
 
   end

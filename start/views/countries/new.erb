@@ -1,0 +1,16 @@
+  <form class="" action="/countries" method="post">
+
+  <label for="country-name">Country name:</label>
+  <input id="country-name" type="text" name="name" />
+
+  <label for="continent-select">Select a continent:</label>
+    <select id="continent-select" name="continent_id">
+      <% @continents.each do |continent| %>
+        <option value=<%= continent.id %>><%= continent.name %></option>
+      <% end %>
+    </select>
+
+
+  <input type='submit' value="Add Country"/>
+
+</form>
