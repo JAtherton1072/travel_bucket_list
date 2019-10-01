@@ -35,4 +35,19 @@
     end
 
 
+
+    def self.all()
+      sql = "SELECT * FROM bucket_lists"
+      bucket_data = SqlRunner.run(sql)
+      return BucketList.map_items(bucket_data)
+    end
+
+
+
+    def self.map_items(data)
+      result = data.map{|bucket| BucketList.new(bucket)}
+      return result
+    end
+
+
   end

@@ -1,0 +1,42 @@
+<form class="" action="/cities/<%= @cities.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+
+  <label for="city-name">City name:</label>
+    <input id="city-name" type="text" name="name" value="<%= @cities.name %>" />
+
+    <label for="country-select">Select a country:</label>
+
+
+
+    <label for="country-select">Select Country:</label>
+  <select name="country_id" id="country-select" selected="<%= @cities.country_id %>">
+    <% @countries.each do |country| %>
+      <% if country.id == @cities.country_id %>
+        <option value=<%= country.id %> selected> <%= country.name %> </option>
+      <% else %>
+        <option value=<%= country.id %> > <%= country.name %> </option>
+      <% end %>
+    <% end %>
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <input type='submit' value="edit city"/>
+</form>
+
+  <p>
+<form action="/cities/<%= @cities.id %>/delete" method="POST">
+  <input type='submit' value="delete" />
+</form>
+</p>
