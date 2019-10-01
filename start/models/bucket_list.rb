@@ -43,10 +43,15 @@
     end
 
 
-
     def self.map_items(data)
       result = data.map{|bucket| BucketList.new(bucket)}
       return result
+    end
+
+    def self.toggle_visted(visited, sight_id)
+      sql = "UPDATE bucket_lists SET visited = $1 WHERE sight_id = $2"
+      values = [visited, sight_id]
+      SqlRunner.run(sql, values)
     end
 
 

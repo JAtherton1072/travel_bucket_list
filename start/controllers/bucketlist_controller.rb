@@ -10,3 +10,8 @@ get '/bucketlists' do
   @sights = Sight.all
   erb( :"bucketlists/index" )
 end
+
+get '/toggle-visited' do
+  BucketList.toggle_visted(params['visited'], params['sight_id'])
+  redirect to '/bucketlists'
+end

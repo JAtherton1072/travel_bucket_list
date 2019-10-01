@@ -19,7 +19,13 @@
       <% end %>
 
       <% if sight.visited? %>
-        <i class="fas fa-plane-arrival"></i>
+        <a  href="/toggle-visited?visited=false&sight_id=<%= sight.id %>">
+          <i class="fas fa-plane-arrival"></i>
+        </a>
+      <% else %>
+        <a href="/toggle-visited?visited=true&sight_id=<%= sight.id %>">
+          <i class="fas fa-plane-departure"></i>
+        </a>
       <% end %>
 
 
