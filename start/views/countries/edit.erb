@@ -1,0 +1,42 @@
+<form class="" action="/countries/<%= @countries.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+
+  <label for="country-name">Country name:</label>
+    <input id="country-name" type="text" name="name" value="<%= @countries.name %>" />
+
+
+
+
+
+    <label for="continent-select">Select Continent:</label>
+  <select name="continent_id" id="continent-select" selected="<%= @countries.continent_id %>">
+    <% @continents.each do |continent| %>
+      <% if continent.id == @countries.continent_id %>
+        <option value=<%= continent.id %> selected> <%= continent.name %> </option>
+      <% else %>
+        <option value=<%= continent.id %> > <%= continent.name %> </option>
+      <% end %>
+    <% end %>
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <input type='submit' value="edit country"/>
+</form>
+
+  <p>
+<form action="/countries/<%= @countries.id %>/delete" method="POST">
+  <input type='submit' value="delete" />
+</form>
+</p>

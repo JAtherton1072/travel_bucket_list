@@ -30,3 +30,31 @@
 
 
   end
+
+
+
+  # EDIT
+
+  get '/countries/:id/edit' do
+    @continents = Continent.all
+    @countries = Country.find(params['id'])
+    erb( :"countries/edit" )
+
+    end
+
+
+    # UPDATE
+
+    put '/countries/:id' do
+      Country.new(params).update
+      redirect '/countries'
+    end
+
+
+
+    # DELETE
+
+    post '/countries/:id/delete' do
+      Country.find(params['id']).delete
+      redirect '/countries'
+    end

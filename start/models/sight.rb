@@ -84,6 +84,31 @@
       return result
     end
 
+
+
+    def self.find( id )
+      sql = "SELECT * FROM sights WHERE id = $1"
+      values = [id]
+      sight = SqlRunner.run( sql, values )
+      result = Sight.new( sight.first )
+      return result
+    end
+
+
+
+    def update()
+      sql = "UPDATE sights SET (name, city_id) = ($1, $2) WHERE id = $3"
+      values = [@name, @city_id, @id]
+      SqlRunner.run(sql, values)
+    end
+
+
+
+
+
+
+
+
     def on_bucket_list?
       # sql query to get number of rows in bucket_lists
       # where sight_id = @id
