@@ -117,10 +117,10 @@
   bucket_list7.save()
   bucket_list8 = BucketList.new({'sight_id' => sight8.id, 'visited' => 0})
   bucket_list8.save()
-  bucket_list9 = BucketList.new({'sight_id' => sight9.id, 'visited' => 0})
-  bucket_list9.save()
-  bucket_list10 = BucketList.new({'sight_id' => sight10.id, 'visited' => 1})
-  bucket_list10.save()
+  # bucket_list9 = BucketList.new({'sight_id' => sight9.id, 'visited' => 0})
+  # bucket_list9.save()
+  # bucket_list10 = BucketList.new({'sight_id' => sight10.id, 'visited' => 1})
+  # bucket_list10.save()
 
 
 

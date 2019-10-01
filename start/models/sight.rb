@@ -1,4 +1,5 @@
   require_relative('../db/sql_runner')
+  require 'pry'
 
   class Sight
 
@@ -112,6 +113,16 @@
     def on_bucket_list?
       # sql query to get number of rows in bucket_lists
       # where sight_id = @id
+      sql = "SELECT COUNT(*) FROM bucket_lists
+            WHERE sight_id = $1"
+      values = [@id]
+      result = SqlRunner.run(sql, values)
+
+      if result[0]['count'].to_i > 0
+        return true
+      else
+        return false
+      end
       # if there are none return false
       # else return true
     end

@@ -3,16 +3,19 @@
   <% @sights.each do |sight| %>
     <% sight.on_bucket_list? %>
 
-  <li>
+  <li >
       <a href="/sights/<%= sight.id %>">
         <%= sight.name   %>
         <% city = sight.city   %> <%= city["name"]%>
         <% country = sight.country   %> <%= country["name"]%>
         <% continent = sight.continent   %> <%= continent["name"]%>
-
-
-
       </a>
+
+      <% if sight.on_bucket_list? %>
+        <i class="fab fa-bitbucket"></i>
+      <% else %>
+        <i class="fas fa-plus"></i>
+      <% end %>
     </li>
 
     <% end %>

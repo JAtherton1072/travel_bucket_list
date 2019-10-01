@@ -49,7 +49,9 @@ table {
 }
 
 
-
+li{
+	font-size: 1rem;
+}
 
   body {
     background-color: #F9EDCC;
