@@ -2,6 +2,7 @@
 
   <% @sights.each do |sight| %>
     <% sight.on_bucket_list? %>
+    <% sight.visited? %>
 
   <li >
       <a href="/sights/<%= sight.id %>">
@@ -16,6 +17,14 @@
       <% else %>
         <i class="fas fa-plus"></i>
       <% end %>
+
+      <% if sight.visited? %>
+        <i class="fas fa-plane-arrival"></i>
+      <% end %>
+
+
+
+
     </li>
 
     <% end %>

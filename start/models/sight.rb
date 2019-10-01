@@ -130,8 +130,15 @@
 
     def visited?
 
+      sql = "SELECT COUNT(*) FROM bucket_lists
+            WHERE sight_id = $1 AND visited = true"
+      values = [@id]
+      result = SqlRunner.run(sql, values)
+
+      if result[0]['count'].to_i > 0
+        return true
+      else
+        return false
+      end
     end
-
-
-
-  end
+end
