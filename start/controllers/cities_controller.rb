@@ -55,6 +55,6 @@
     # DELETE
 
     post '/cities/:id/delete' do
-      City.delete(params[:id])
+      City.find(params['id']).delete
       redirect '/cities'
     end
