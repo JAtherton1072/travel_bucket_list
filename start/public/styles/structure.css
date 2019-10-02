@@ -53,10 +53,6 @@ li{
 	font-size: 1rem;
 }
 
-  body {
-    background-color: #F9EDCC;
-    font-family: 'Montserrat', sans-serif;
-  }
 
 
 
@@ -73,10 +69,18 @@ li{
     font-size: 4rem;
 
   }
+
+/* ============================================================= */
+
 body {
   background: orange url('/images/background.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
+	background-color: #F9EDCC;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .nav {
@@ -96,4 +100,19 @@ body {
 	margin-right: 20px;
 	    width: 100px;
 	    height: 100px;
+}
+
+.main-container{
+	flex: 1;
+}
+
+#footer {
+ font-size: 1.0rem;
+ text-align: center;
+ height: 100px;
+ color: white;
+ background-color: black;
+ height: 100px;
+ color: white;
+ justify-content: flex-end;
 }
