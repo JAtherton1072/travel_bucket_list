@@ -13,9 +13,10 @@
       </a>
 
       <% if sight.on_bucket_list? %>
-        <i class="fab fa-bitbucket"></i>
+        <a href="/toggle-on-bucket-list?add=false&sight_id=<%= sight.id %>"><i class="fab fa-bitbucket"></i>
       <% else %>
-        <i class="fas fa-plus"></i>
+      <a href="/toggle-on-bucket-list?add=true&sight_id=<%= sight.id %>"><i class="fas fa-plus"></i>
+
       <% end %>
 
       <% if sight.visited? %>

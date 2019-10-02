@@ -54,5 +54,19 @@
       SqlRunner.run(sql, values)
     end
 
+    def self.delete(sight_id)
+      sql = "DELETE FROM bucket_lists WHERE sight_id = $1"
+      values = [sight_id]
+      SqlRunner.run(sql, values)
+
+    end
+
+    def self.toggle_on_bucket_list(sight_id, add_to_list)
+      if add_to_list == "true"
+        BucketList.new({"sight_id" => sight_id, "visited" => 0}).save
+      elsif add_to_list == "false"
+        BucketList.delete(sight_id)
+      end
+    end
 
   end
